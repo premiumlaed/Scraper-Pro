@@ -2,83 +2,81 @@ Here's a comprehensive README.md description for your Google Scraper Pro project
 
 # Scraper Pro
 
-A powerful and user-friendly GUI application for scraping contact information from Google search results, built with CustomTkinter and Selenium.
+A sophisticated web scraping application built with CustomTkinter and Selenium for extracting contact information from Google search results, specifically designed for job and company research.
 
 ![Application Screenshot](path_to_screenshot.png)
 
-## Features
+## 🌟 Key Features
 
-### Search Capabilities
-- **Multi-Platform Search**
-  - LinkedIn
-  - Facebook
-  - Combined platform search
+### 🔍 Search Capabilities
+- **Multi-Platform Search Engine**
+  - LinkedIn integration
+  - Facebook integration
+  - Cross-platform search capability
 - **Advanced Search Parameters**
   - Job title targeting
-  - Company-specific search
-  - Location-based filtering
-  - Customizable search depth (pages)
+  - Company-specific filtering
+  - Location-based search
+  - Customizable page depth
 
-### Data Extraction
-- **Contact Information**
-  - Email addresses (multiple patterns)
-  - Phone numbers (international formats)
-  - Social media profiles
-- **Smart Parsing**
-  - Regular expression pattern matching
-  - Data validation and cleaning
+### 📱 Contact Information Extraction
+- **Email Detection**
+  - Multiple email pattern recognition
+  - Email validation and cleaning
   - Duplicate removal
+- **Phone Number Detection**
+  - International format support
+  - Multiple phone patterns
+  - Middle East number formats (UAE, KSA)
+  - Smart cleaning and validation
 
-### User Interface
+### 💻 User Interface
 - **Modern Design**
   - Dark/Light mode support
-  - Progress tracking
-  - Real-time status updates
-- **Interactive Results**
+  - Real-time progress tracking
+  - Status updates
+  - Toast notifications
+- **Interactive Results Display**
   - Clickable URLs
   - Copy functionality
-  - Sortable results
+  - Organized layout
+  - Scrollable results
 
-### Export Options
-- **Multiple Formats**
-  - CSV export
-  - JSON export
-- **Auto-formatting**
-  - Timestamp-based filenames
-  - UTF-8 encoding support
-  - Structured data output
+### 💾 Data Management
+- **Export Options**
+  - CSV export with UTF-8 support
+  - JSON export with formatting
+  - Automatic file naming
+  - Direct folder access
+- **Result Processing**
+  - Data cleaning
+  - Duplicate removal
+  - Structured output
 
-### Performance
-- **Multi-threading Support**
-  - Non-blocking UI
-  - Cancelable operations
-- **Resource Management**
-  - Automated driver handling
-  - Memory optimization
-  - Connection error handling
-
-## Installation
+## 🛠️ Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/google-scraper-pro.git
 
-# Navigate to the project directory
+# Navigate to project directory
 cd google-scraper-pro
 
 # Install required packages
 pip install -r requirements.txt
 ```
 
-### Requirements
-- Python 3.7+
-- CustomTkinter
-- Selenium
-- BeautifulSoup4
-- Pandas
-- Chrome WebDriver
+### 📋 Requirements
+```
+customtkinter>=5.0.0
+selenium>=4.0.0
+beautifulsoup4>=4.9.3
+pandas>=1.3.0
+webdriver_manager>=3.8.0
+requests>=2.26.0
+```
 
-## Usage
+## 🚀 Usage
 
 1. Launch the application:
 ```bash
@@ -86,24 +84,65 @@ python scraper_app.py
 ```
 
 2. Enter search criteria:
-   - Job title (required)
-   - Company name (optional)
-   - Location (optional)
+   - Required: Job title
+   - Optional: Company name
+   - Optional: Location
 
-3. Configure advanced options:
-   - Select platform(s)
-   - Set maximum pages
-   - Choose export format
+3. Configure search settings:
+   - Select platform (LinkedIn/Facebook/All)
+   - Set maximum pages to scrape
+   - Start search
 
-4. Click "Start Search" and monitor progress
+4. Manage results:
+   - View extracted information
+   - Open source URLs
+   - Copy contact details
+   - Export data
 
-## Suggested Improvements
+## 🔧 Code Structure
+
+```python
+project/
+├── src/
+│   ├── scraper_app.py      # Main application
+│   ├── data_extractor.py   # Data extraction logic
+│   └── google_scraper.py   # Web scraping implementation
+├── utils/
+│   ├── config.py           # Configuration settings
+│   └── helpers.py          # Utility functions
+├── exports/               # Export directory
+│   ├── csv/
+│   └── json/
+└── requirements.txt
+```
+
+## 🔄 Features in Detail
+
+### DataExtractor Class
+- Email pattern matching
+- Phone number recognition
+- Text cleaning
+- Contact information extraction
+
+### GoogleScraper Class
+- Browser automation
+- Search execution
+- Result extraction
+- Page navigation
+
+### ScraperApp Class
+- UI management
+- Search coordination
+- Result display
+- Export handling
+
+## 🛠️ Suggested Improvements
 
 1. **Search Enhancement**
    - Add proxy support
    - Implement rate limiting
    - Add custom search patterns
-   - Include advanced filtering options
+   - Include advanced filtering
 
 2. **UI Improvements**
    - Add result filtering
@@ -114,60 +153,51 @@ python scraper_app.py
 3. **Data Management**
    - Add database integration
    - Implement data backup
-   - Add data deduplication
-   - Include data validation rules
+   - Add data validation rules
+   - Include duplicate management
 
-4. **Performance Optimization**
+4. **Performance**
    - Add batch processing
    - Implement caching
    - Add parallel processing
    - Optimize memory usage
 
-5. **Security Features**
+5. **Security**
+   - Add proxy rotation
+   - Implement user authentication
    - Add API key support
-   - Implement rate limiting
-   - Add user authentication
    - Include logging system
 
-## Project Structure
-
-```
-google-scraper-pro/
-├── src/
-│   ├── scraper_app.py
-│   ├── data_extractor.py
-│   └── google_scraper.py
-├── utils/
-│   ├── config.py
-│   └── helpers.py
-├── tests/
-│   └── test_scraper.py
-├── requirements.txt
-└── README.md
-```
-
-## Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-- CustomTkinter for the modern UI components
-- Selenium for web automation capabilities
+- CustomTkinter for the modern UI framework
+- Selenium for web automation
+- Beautiful Soup for HTML parsing
 - Chrome WebDriver for browser automation
 
-## Support
+## 📧 Support
 
-For support, email support@example.com or open an issue in the repository.
+For support, please email support@example.com or open an issue in the repository.
 
 ---
 
-Remember to replace placeholder values (like screenshots, email, and repository links) with your actual project information. This README provides a comprehensive overview while maintaining a professional structure suitable for GitHub.
+Remember to:
+1. Replace placeholder image paths
+2. Update repository links
+3. Add actual screenshots
+4. Update contact information
+5. Add your specific license details
+
+This README provides a comprehensive overview while maintaining a professional structure suitable for GitHub.
